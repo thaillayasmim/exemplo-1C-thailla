@@ -9,4 +9,284 @@
 <body>
     
 </body>
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte | Sistema Sustentável</title>
+    <style>
+        /* --- PALETA DE CORES FRIAS & CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --azul-escuro: #0B1B29;
+            --verde-frio: #1D4A47;
+            --azul-claro: #4A7C80;
+            --gelo: #F0F4F5;
+            --branco: #FFFFFF;
+            --texto-escuro: #2D3748;
+            --transicao: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--gelo);
+            color: var(--texto-escuro);
+            line-height: 1.6;
+        }
+
+        /* --- CABEÇALHO (NAVBAR) --- */
+        header {
+            background-color: var(--azul-escuro);
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--branco);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #76A5AF;
+        }
+
+        nav a {
+            color: var(--gelo);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: var(--transicao);
+        }
+
+        nav a:hover {
+            color: #76A5AF;
+        }
+
+        /* --- SEÇÃO HERO (INTRODUÇÃO) --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(11,27,41,0.95) 0%, rgba(29,74,71,0.9) 100%);
+            color: var(--branco);
+            padding: 8rem 10% 6rem 10%;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            color: #CCD9DB;
+            animation: fadeInUp 1s ease;
+        }
+
+        .btn-principal {
+            background-color: var(--azul-claro);
+            color: var(--branco);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transicao);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-principal:hover {
+            background-color: #619499;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- SEÇÃO DE DIFERENCIAIS (CARDS) --- */
+        .features {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--branco);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transicao);
+            border-top: 4px solid var(--verde-frio);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--azul-escuro);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* --- SEÇÃO DE NÚMEROS (CONTADORES ANIMADOS) --- */
+        .stats {
+            background-color: var(--verde-frio);
+            color: var(--branco);
+            padding: 4rem 10%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            color: #76A5AF;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--azul-escuro);
+            color: #A0AEC0;
+            padding: 3rem 10%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* --- ANIMAÇÕES CSS --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            header { padding: 1.5rem 5%; }
+            nav { display: none; } /* Simplificado para o exemplo */
+            .hero h1 { font-size: 2.2rem; }
+            .stats { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">AGRO<span>FORTE</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Pilares</a>
+            <a href="#impacto">Impacto</a>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="inicio">
+        <h1>O Futuro da Produção é Sustentável</h1>
+        <p>Unimos a força bruta do campo à inteligência ecológica do amanhã. Conheça o sistema que aumenta a produtividade preservando a biodiversidade.</p>
+        <a href="#sobre" class="btn-principal">Descubra Como</a>
+    </section>
+
+    <!-- SEÇÃO DE DIFERENCIAIS -->
+    <section class="features" id="sobre">
+        <div class="card">
+            <h3>Tecnologia de Precisão</h3>
+            <p>Otimização de insumos através de análise de dados via satélite, reduzindo o desperdício de água e defensivos em até 40%.</p>
+        </div>
+        <div class="card">
+            <h3>Crédito de Carbono</h3>
+            <p>Sistemas de plantio direto que retêm o carbono no solo, transformando a lavoura em uma aliada direta contra o aquecimento global.</p>
+        </div>
+        <div class="card">
+            <h3>Manejo Biológico</h3>
+            <p>Substituição gradativa de químicos por bioinsumos, fortalecendo a saúde da terra e garantindo alimentos mais limpos.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE NÚMEROS ANIMADOS -->
+    <section class="stats" id="impacto">
+        <div class="stat-item">
+            <h2 class="contador" data-alvo="35">0</h2>
+            <p>% Redução de Emissões</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="contador" data-alvo="150">0</h2>
+            <p>Mil Hectares Monitorados</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="contador" data-alvo="98">0</h2>
+            <p>% Eficiência Hídrica</p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 AgroForte Sistema Sustentável. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- INTERATIVIDADE COM JAVASCRIPT -->
+    <script>
+        // Efeito de contagem progressiva ao rolar a página até a seção de impacto
+        const contadores = document.querySelectorAll('.contador');
+        const velocidade = 50; 
+
+        const iniciarContagem = (componente) => {
+            const atualizarTexto = () => {
+                const alvo = +componente.getAttribute('data-alvo');
+                const textoAtual = +componente.innerText;
+                const incremento = Math.ceil(alvo / velocidade);
+
+                if (textoAtual < alvo) {
+                    componente.innerText = textoAtual + incremento;
+                    setTimeout(atualizarTexto, 30);
+                } else {
+                    componente.innerText = alvo;
+                }
+            };
+            atualizarTexto();
+        };
+
+        // Observador para ativar a animação apenas quando o usuário ver os números
+        const observador = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    iniciarContagem(entry.target);
+                    observador.unobserve(entry.target); // Roda a animação apenas uma vez
+                }
+            });
+        }, { threshold: 0.5 });
+
+        contadores.forEach(contador => observador.observe(contador));
+    </script>
+</body>
 </html>
