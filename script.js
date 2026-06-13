@@ -1,23 +1,44 @@
-// Mostrar mais informações sobre agro sustentável
-const saibaMaisBtn = document.getElementById('saibaMaisBtn');
-const maisInfo = document.getElementById('maisInfo');
+// MENSAGEM
 
-saibaMaisBtn.addEventListener('click', () => {
-    if (maisInfo.style.display === 'none') {
-        maisInfo.style.display = 'block';
-        saibaMaisBtn.textContent = 'Mostrar Menos';
-    } else {
-        maisInfo.style.display = 'none';
-        saibaMaisBtn.textContent = 'Saiba Mais';
+function mostrarMensagem() {
+
+    alert(
+        "Adotar práticas sustentáveis hoje garante recursos naturais e qualidade de vida para as futuras gerações."
+    );
+
+}
+
+// CONTADOR
+
+let numero = document.getElementById("numero");
+
+let valor = 0;
+
+let contador = setInterval(() => {
+
+    valor += 10;
+
+    numero.textContent = valor;
+
+    if(valor >= 1000){
+        clearInterval(contador);
     }
-});
 
-// Simulação de envio de formulário
-const form = document.getElementById('contatoForm');
-const mensagemSucesso = document.getElementById('mensagemSucesso');
+}, 20);
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Evita recarregar a página
-    mensagemSucesso.style.display = 'block';
-    form.reset();
+
+// MODO ESCURO
+
+const botao = document.getElementById("darkModeBtn");
+
+botao.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        botao.textContent = "☀️ Modo Claro";
+    } else {
+        botao.textContent = "🌙 Modo Escuro";
+    }
+
 });
