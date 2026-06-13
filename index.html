@@ -1,68 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agro Sustentável</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Agro Sustentável</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="sobre">
-        <h2>O que é Agro Sustentável?</h2>
-        <p>
-            O agro sustentável é um conjunto de práticas agrícolas que buscam produzir alimentos
-            de maneira eficiente, respeitando o meio ambiente, conservando os recursos naturais
-            e promovendo a saúde das pessoas e do planeta.
-        </p>
-        <button id="saibaMaisBtn">Saiba Mais</button>
-        <p id="maisInfo" style="display:none;">
-            Exemplos incluem rotação de culturas, uso de fertilizantes orgânicos, manejo consciente da água
-            e preservação da biodiversidade.
-        </p>
-    </section>
+<header>
+    <h1>🌱 Agro Sustentável</h1>
+    <p>Preservando o presente para garantir o futuro.</p>
 
-    <section id="beneficios">
-        <h2>Benefícios do Agro Sustentável</h2>
-        <ul>
-            <li>Preservação ambiental</li>
-            <li>Produção de alimentos mais saudáveis</li>
-            <li>Redução de desperdício de água</li>
-            <li>Valorização de comunidades rurais</li>
-        </ul>
-    </section>
+    <button id="darkModeBtn">
+        🌙 Modo Escuro
+    </button>
+</header>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <form id="contatoForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" required>
+<nav>
+    <a href="#impactos">Impactos</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#organizacoes">Organizações</a>
+</nav>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+<section id="impactos">
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" required></textarea>
+    <h2>Consequências do Modelo Industrial</h2>
 
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="mensagemSucesso" style="display:none; color:green;">Mensagem enviada com sucesso!</p>
-    </section>
+    <div class="cards">
 
-    <footer>
-        <p>&copy; 2026 Agro Sustentável</p>
-    </footer>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80">
 
-    <script src="script.js"></script>
+            <div class="conteudo">
+                <h3>Desmatamento</h3>
+
+                <p>
+                    A expansão agrícola sem planejamento reduz áreas naturais
+                    e ameaça diversas espécies.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e5?auto=format&fit=crop&w=1000&q=80">
+
+            <div class="conteudo">
+                <h3>Poluição</h3>
+
+                <p>
+                    O uso excessivo de defensivos e fertilizantes pode
+                    contaminar solos e rios.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80">
+
+            <div class="conteudo">
+                <h3>Mudanças Climáticas</h3>
+
+                <p>
+                    Processos industriais aumentam as emissões de gases
+                    de efeito estufa.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="solucoes">
+
+    <h2>O Que Podemos Fazer?</h2>
+
+    <ul>
+        <li>☀️ Utilizar energia solar e eólica.</li>
+        <li>📚 Promover educação ambiental.</li>
+        <li>♻️ Incentivar reciclagem e reutilização.</li>
+        <li>🌳 Criar áreas verdes próximas às plantações.</li>
+        <li>💧 Economizar água.</li>
+        <li>🌱 Aplicar agricultura sustentável.</li>
+    </ul>
+
+    <button onclick="mostrarMensagem()">
+        Saiba Mais
+    </button>
+
+</section>
+
+<section class="contador">
+
+    <h2>Árvores Preservadas</h2>
+
+    <div id="numero">0</div>
+
+    <p>Cada atitude sustentável faz diferença.</p>
+
+</section>
+
+<section id="organizacoes">
+
+    <h2>Organizações Ambientais</h2>
+
+    <div class="orgs">
+
+        <div class="org">
+            <h3>Greenpeace</h3>
+            <p>Defesa do clima, oceanos e florestas.</p>
+        </div>
+
+        <div class="org">
+            <h3>WWF</h3>
+            <p>Conservação da biodiversidade mundial.</p>
+        </div>
+
+        <div class="org">
+            <h3>SOS Mata Atlântica</h3>
+            <p>Proteção dos biomas brasileiros.</p>
+        </div>
+
+        <div class="org">
+            <h3>ONU Meio Ambiente</h3>
+            <p>Promoção do desenvolvimento sustentável.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>🌎 Agro Sustentável - Futuras gerações dependem das nossas ações.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
